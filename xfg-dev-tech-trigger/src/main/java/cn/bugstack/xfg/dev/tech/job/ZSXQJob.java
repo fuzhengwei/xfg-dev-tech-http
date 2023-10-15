@@ -45,7 +45,7 @@ public class ZSXQJob {
     @Autowired(required = false)
     private OpenAiSession openAiSession;
 
-    private final Set<Long> topicIds = new HashSet<>();
+    private volatile Set<Long> topicIds = new HashSet<>();
 
     @Value("${chatglm.sdk.config.cookie}")
     private String cookie;

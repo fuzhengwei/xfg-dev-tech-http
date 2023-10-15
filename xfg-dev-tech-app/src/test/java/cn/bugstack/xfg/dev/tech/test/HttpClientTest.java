@@ -34,6 +34,9 @@ import java.io.IOException;
 @Slf4j
 public class HttpClientTest {
 
+    // F12 点接口，看标头里的信息 https://wx.zsxq.com/dweb2/index/group/28885518425541
+    private final String cookie = "zsxq_access_token=86EB233E***** 替换为你的";
+
     @Test
     public void test_httpClient_comments(){
         CloseableHttpClient httpClient = HttpClientBuilder.create().build();
@@ -45,7 +48,7 @@ public class HttpClientTest {
         httpPost.setHeader("accept-language", "zh-CN,zh;q=0.9,en;q=0.8");
         httpPost.setHeader("authority", "api.zsxq.com");
         httpPost.setHeader("content-type", "application/json");
-        httpPost.setHeader("cookie", "zsxq_access_token=86EB233E-BBD0-1E3C-941D-817CA1303C87_9D76421394C6F474");
+        httpPost.setHeader("cookie", cookie);
         httpPost.setHeader("dnt", "1");
         httpPost.setHeader("origin", "https://wx.zsxq.com");
         httpPost.setHeader("referer", "https://wx.zsxq.com/");
@@ -87,7 +90,7 @@ public class HttpClientTest {
         get.addHeader("accept", "application/json, text/plain, */*");
         get.addHeader("accept-language", "zh-CN,zh;q=0.9,en;q=0.8");
         get.addHeader("authority", "api.zsxq.com");
-        get.addHeader("cookie", "zsxq_access_token=86EB233E-BBD0-1E3C-941D-817CA1303C87_9D76421394C6F474");
+        get.addHeader("cookie", cookie);
         get.addHeader("dnt", "1");
         get.addHeader("origin", "https://wx.zsxq.com");
         get.addHeader("referer", "https://wx.zsxq.com/");

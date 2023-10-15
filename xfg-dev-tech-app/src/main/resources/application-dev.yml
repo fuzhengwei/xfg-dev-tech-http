@@ -3,15 +3,18 @@ server:
   application:
     name: xfg-dev-tech-zookeeper
 
-# zookeeper 自定义链接配置
-zookeeper:
+# ChatGLM SDK Config
+chatglm:
   sdk:
     config:
-      connect-string: 192.168.1.103:2181
-      base-sleep-time-ms: 1000
-      max-retries: 3
-      session-timeout-ms: 18000
-      connection-timeout-ms: 30000
+      # 状态；true = 开启、false 关闭
+      enabled: true
+      # 官网地址
+      api-host: https://open.bigmodel.cn/
+      # 官网申请 https://open.bigmodel.cn/usercenter/apikeys
+      api-secret-key: 4e087e4135306ef4a676f0cce3c****.sg*****I
+      # 知识星球 Cookie 你需要获取你的 cookie 登录
+      cookie: zsxq_access_token=86******3C-941D-817CA1303C87_9D76*****
 
 # 日志
 logging:
