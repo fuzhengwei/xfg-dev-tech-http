@@ -1,7 +1,7 @@
 server:
   port: 8091
   application:
-    name: xfg-dev-tech-zookeeper
+    name: xfg-dev-tech-http
 
 # ChatGLM SDK Config
 chatglm:
