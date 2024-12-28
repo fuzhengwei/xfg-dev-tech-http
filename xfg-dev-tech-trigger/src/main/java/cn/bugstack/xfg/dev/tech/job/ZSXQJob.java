@@ -127,7 +127,7 @@ public class ZSXQJob {
                                     }
 
                                 });
-                            } catch (JsonProcessingException e) {
+                            } catch (Exception e) {
                                 throw new RuntimeException(e);
                             }
                         }).start();
